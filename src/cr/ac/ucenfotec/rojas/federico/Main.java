@@ -1,4 +1,4 @@
-package cr.ac.ucenfotec.rojas.federico;
+package cr.ac.ucenfotec.rojas.federico; //cambios para GitHub
 
 import cr.ac.ucenfotec.rojas.federico.entidades.Citas;
 import cr.ac.ucenfotec.rojas.federico.entidades.Mascota;
