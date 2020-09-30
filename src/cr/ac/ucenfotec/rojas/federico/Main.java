@@ -1,9 +1,7 @@
-package cr.ac.ucenfotec.rojas.federico; //cambios para GitHub
+package cr.ac.ucenfotec.rojas.federico;
 
-import cr.ac.ucenfotec.rojas.federico.entidades.Citas;
-import cr.ac.ucenfotec.rojas.federico.entidades.Mascota;
-import cr.ac.ucenfotec.rojas.federico.entidades.Reservaciones;
-import cr.ac.ucenfotec.rojas.federico.entidades.Usuario;
+import cr.ac.ucenfotec.rojas.federico.bl.Logica;
+
 import cr.ac.ucenfotec.rojas.federico.ui.Menu;
 
 import java.io.PrintStream;
@@ -14,24 +12,21 @@ public class Main {
     private static Scanner leer = new Scanner(System.in).useDelimiter("\\n");
     private static PrintStream output = new PrintStream(System.out);
 
-    private static Mascota[] arregloDeMascotas = new Mascota[2];
-    private static int posicion = 0;
-    private static Usuario[] arregloDeUsuarios = new Usuario[2];
-    private static Citas[] arregloDeCitas = new Citas[2];
-    private static Reservaciones[] arregloDeReservaciones = new Reservaciones[2];
+    private static Logica opcionElegida = new Logica();
 
     public static void main(String[] args) {
         Menu interfaz = new Menu();
         int opcion = 0;
+        Logica opcionElegida = new Logica();
 
         do {
             interfaz.mostrarMenu();
             opcion = leer.nextInt();
-            procesarOpcion(opcion);
-        }while (opcion != 9);
+            opcionElegida.procesarOpcion(opcion);
+        }while (opcion != 11);
     }
 
-    private static void procesarOpcion(int opcion) {
+    /*private static void procesarOpcion(int opcion) {
         switch (opcion) {
             case 1:
                 registrarMascota();
@@ -122,12 +117,12 @@ public class Main {
         int ranking = leer.nextInt();
         System.out.println("");
         Mascota nueva = new Mascota(nombreMascota, nombreDueno, cedulaDueno, telefonoDueno, direccionDueno, fotoMascota, observaciones, ranking);
-        /*arregloDeMascotas[posicion++] = nueva;*/
+        arregloDeMascotas[posicion++] = nueva;
         for (int i = 0; i < arregloDeMascotas.length; i++) {
             if (arregloDeMascotas[i] != null) {
                 if (arregloDeMascotas[i].getNombreMascota().equals(nueva.getNombreMascota())) {
                     System.out.println("El nombre de la mascota ya está registrado");
-                    /*arregloDeMascotas[i] = null;*/
+                    arregloDeMascotas[i] = null;
                     break;
                 }
             } else {
@@ -178,5 +173,5 @@ public class Main {
         for (int i = 0; i < arregloDeUsuarios.length; i++) {
             System.out.println("Usuario #" + (i + 1) + " es " + arregloDeUsuarios[i]);
         }
-    }
+    }*/
 }

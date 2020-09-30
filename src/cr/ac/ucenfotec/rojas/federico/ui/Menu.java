@@ -6,19 +6,23 @@ public class Menu {
     private PrintStream output = new PrintStream(System.out);
 
     public void mostrarMenu(){
-        output.println("");
+        output.println(" ");
         output.println("Bienvenido al sistema de la Veterinaria Moka"); //se puede sustituir por un System.out.println(""); y sin necesidad de la línea 6
-        output.println("");
+        output.println(" ");
+        output.println("Nota: si va a registrar una mascota tenga la amabilidad de registrar PRIMERO el dueño, opción 9.");
+        output.println(" ");
         output.println("Seleccione su opción");
-        output.println("1. Registre la mascota");
-        output.println("2. Listar las mascotas");
-        output.println("3. Registro de usuarios del sistema");
-        output.println("4. Listar los usuarios del sistema");
-        output.println("5. Registre una cita médica");
-        output.println("6. Listar las citas médicas");
-        output.println("7. Registre una reservación");
-        output.println("8. Listar las reservaciones");
-        output.println("9. Salir");
+        output.println("1.  Registre la mascota");
+        output.println("2.  Listar las mascotas");
+        output.println("3.  Registro de usuarios del sistema");
+        output.println("4.  Listar los usuarios del sistema");
+        output.println("5.  Registre una cita médica");
+        output.println("6.  Listar las citas médicas");
+        output.println("7.  Registre una reservación");
+        output.println("8.  Listar las reservaciones");
+        output.println("9.  Registrar un dueño de mascota");
+        output.println("10. Listar dueños de mascotas");
+        output.println("11. Salir");
         output.print("Digite su opción: ");
     }
 }

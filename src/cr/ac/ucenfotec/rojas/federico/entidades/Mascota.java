@@ -2,13 +2,18 @@ package cr.ac.ucenfotec.rojas.federico.entidades;
 
 public class Mascota {
     private String nombreMascota;
-    private String nombreDueno;
-    private int cedulaDueno;
-    private int telefonoDueno;
-    private String direccionDueno;
     private String fotoMascota;
     private String observaciones;
     private int ranking;
+    private Dueno dueno;
+
+    public Dueno getDueno() {
+        return dueno;
+    }
+
+    public void setDueno(Dueno dueno) {
+        this.dueno = dueno;
+    }
 
     public void setNombreMascota(String nombreMascota){
         this.nombreMascota = nombreMascota;
@@ -17,7 +22,7 @@ public class Mascota {
         return this.nombreMascota;
     }
 
-    public String getNombreDueno() {
+/*    public String getNombreDueno() {
         return nombreDueno;
     }
 
@@ -47,7 +52,7 @@ public class Mascota {
 
     public void setDireccionDueno(String direccionDueno) {
         this.direccionDueno = direccionDueno;
-    }
+    }*/
 
     public String getFotoMascota() {
         return fotoMascota;
@@ -74,21 +79,23 @@ public class Mascota {
     }
 
     @Override
-    public String toString(){
-        return " [: " + this.nombreMascota + ", del dueño " + this.nombreDueno + ", con cédula " + this.cedulaDueno + " teléfono No. " + this.telefonoDueno + ", con dirección en " + this.direccionDueno + ". La foto es: " + this.fotoMascota + ". Observaciones: " + this.observaciones + " y ranking de: " + this.ranking + "]";
+    public String toString() {
+        return "Mascota{" +
+                "nombreMascota='" + nombreMascota + '\'' +
+                ", fotoMascota='" + fotoMascota + '\'' +
+                ", observaciones='" + observaciones + '\'' +
+                ", ranking=" + ranking +
+                ", dueno=" + dueno +
+                '}';
     }
 
-    public Mascota(String nombreMascota, String nombreDueno, int cedulaDueno, int telefonoDueno, String direccionDueno, String fotoMascota, String observaciones, int ranking) {
+    public Mascota(String nombreMascota, String fotoMascota, String observaciones, int ranking, Dueno dueno) {
         this.nombreMascota = nombreMascota;
-        this.nombreDueno = nombreDueno;
-        this.cedulaDueno = cedulaDueno;
-        this.telefonoDueno = telefonoDueno;
-        this.direccionDueno = direccionDueno;
         this.fotoMascota = fotoMascota;
         this.observaciones = observaciones;
         this.ranking = ranking;
+        this.dueno = dueno;
     }
 
-    public Mascota() {
-    }
+    public Mascota() {}
 }

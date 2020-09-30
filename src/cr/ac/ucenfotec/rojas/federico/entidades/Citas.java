@@ -1,4 +1,4 @@
-package cr.ac.ucenfotec.rojas.federico.entidades;
+package cr.ac.ucenfotec.rojas.federico.entidades; //ajuste final
 
 public class Citas {
     private String nombreMascota;
