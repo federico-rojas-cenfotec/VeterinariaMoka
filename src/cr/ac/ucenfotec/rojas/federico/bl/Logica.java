@@ -125,7 +125,7 @@ public class Logica {
     private void registrarMascota() {
         output.print("Digite el nombre de la mascota: ");
         String nombreMascota = leer.next();
-        
+
         output.print("Suba una foto de la mascota: ");
         String fotoMascota = leer.next();
         output.print("Espacio para observaciones: ");
@@ -142,13 +142,11 @@ public class Logica {
             }
         }
         Mascota nueva = new Mascota(nombreMascota, fotoMascota, observaciones, ranking, dueno);
-        //Mascota nueva = new Mascota(nombreMascota, nombreDueno, cedulaDueno, telefonoDueno, direccionDueno, fotoMascota, observaciones, ranking);
-        /*arregloDeMascotas[posicion++] = nueva;*/
+
         for (int i = 0; i < arregloDeMascotas.length; i++) {
             if (arregloDeMascotas[i] != null) {
                 if (arregloDeMascotas[i].getNombreMascota().equals(nueva.getNombreMascota())) {
                     System.out.println("El nombre de la mascota ya está registrado");
-                    /*arregloDeMascotas[i] = null;*/
                     break;
                 }
             } else {
