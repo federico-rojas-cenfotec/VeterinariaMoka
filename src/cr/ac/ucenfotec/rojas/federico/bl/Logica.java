@@ -125,14 +125,7 @@ public class Logica {
     private void registrarMascota() {
         output.print("Digite el nombre de la mascota: ");
         String nombreMascota = leer.next();
-        /*output.print("Digite el nombre del dueño: ");
-        String nombreDueno = leer.next();
-        output.print("Digite el número de cédula del dueño: ");
-        int cedulaDueno = leer.nextInt();
-        output.print("Digite el número de teléfono del dueño: ");
-        int telefonoDueno = leer.nextInt();
-        output.print("Digite la dirección del dueño: ");
-        String direccionDueno = leer.next();*/
+        
         output.print("Suba una foto de la mascota: ");
         String fotoMascota = leer.next();
         output.print("Espacio para observaciones: ");
