@@ -136,7 +136,7 @@ public class Logica {
         System.out.print("Digite el id del dueño: ");
         int id = leer.nextInt();
         for (int i = 0; i < arregloDuenosMascotas.length; i++){
-            if(arregloDuenosMascotas[i].getCedulaDueno() == id){
+            if(arregloDuenosMascotas[i].getCedulaDueno() == id){ //.getCedulaDueno()
                 dueno = arregloDuenosMascotas[i];
                 break;
             }

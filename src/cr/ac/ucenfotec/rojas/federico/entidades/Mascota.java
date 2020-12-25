@@ -22,38 +22,6 @@ public class Mascota {
         return this.nombreMascota;
     }
 
-/*    public String getNombreDueno() {
-        return nombreDueno;
-    }
-
-    public void setNombreDueno(String nombreDueno) {
-        this.nombreDueno = nombreDueno;
-    }
-
-    public int getCedulaDueno() {
-        return cedulaDueno;
-    }
-
-    public void setCedulaDueno(int cedulaDueno) {
-        this.cedulaDueno = cedulaDueno;
-    }
-
-    public int getTelefonoDueno() {
-        return telefonoDueno;
-    }
-
-    public void setTelefonoDueno(int telefonoDueno) {
-        this.telefonoDueno = telefonoDueno;
-    }
-
-    public String getDireccionDueno() {
-        return direccionDueno;
-    }
-
-    public void setDireccionDueno(String direccionDueno) {
-        this.direccionDueno = direccionDueno;
-    }*/
-
     public String getFotoMascota() {
         return fotoMascota;
     }
